@@ -13,7 +13,6 @@ def cekJumlahKarakter(input):
             bisa = True
         if lenInput < 0 :
             break
-    # print(bisa)
     return bisa, counter
 
 def segitigaKata(inputKal):
@@ -57,8 +56,8 @@ def segitigaKata(inputKal):
         
 
 def main():
-    # kalimat = input("masukkan kalimat : ")
-    kalimat = "Purwadhika Startup and Coding School @BSD"
+    kalimat = input("masukkan kalimat : ")
+    # kalimat = "Purwadhika Startup and Coding School @BSD"
     sep()
     print("kalimat : ", kalimat)
     segitigaKata(kalimat)
