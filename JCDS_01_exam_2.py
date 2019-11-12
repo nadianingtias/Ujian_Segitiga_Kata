@@ -1,3 +1,6 @@
+def sep():
+    print("--------------------------------------------------------------------------")
+
 def cekJumlahKarakter(input):
     lenInput = len(input)
     bisa = False
@@ -16,26 +19,43 @@ def segitigaKata(inputKal):
     lenInput = len(input)
     # print(cekJumlahKarakter(inputKal) )
     if not cekJumlahKarakter(input) :
-        print("Mohon maaf, jumlah karakter tidak memenuhi syarat membentuk pola.")
+        print("===== Mohon maaf, jumlah karakter tidak memenuhi syarat membentuk pola. =====")
     else:
         # print("lanjut")
         start = 0
         stop=0
-        for i in range(1, lenInput):
+        counter = 0
+        for i in range(1, int(lenInput/2)):
+            counter+=1
             stop += i
-            print(input[start:stop]+ " ",)
+            # print(input[start:stop]+ " ",)
+            x = list(input[start:stop])
+            for h in x :
+                print(h+ ' ', end='')
+            print('')
             start = stop
-        start = 0
-        stop=lenInput
-        for i in range(1, lenInput):
-            stop -= i
-            print(input[start:stop]+ " ",)
-            start = stop
-            
+        
+        cc = counter
+        print(stop)
+        stop = stop-1
+        start =0
+        print(start+counter)
+        for i in range(0, cc+1):
+            # stop = counter
+            print(input[start:start+counter])
+            # x = list(input[start:start+counter])
+            # for h in x :
+            #     print(h+ ' ', end='')
+            # print('')
+            start = counter + start
+            counter -=1
+
+        
 
 def main():
-    kalimat = "Purwadhika"
-    print("kal : ", kalimat)
+    kalimat = input("masukkan kalimat : ")
+    sep()
+    print("kalimat : ", kalimat)
     segitigaKata(kalimat)
 
 
