@@ -20,7 +20,7 @@ def segitigaKata(inputKal):
     lenInput = len(input)
     # print(cekJumlahKarakter(inputKal) )
     cekJumlah, baris = cekJumlahKarakter(input)
-    print("ini ",baris)
+    # print("ini ",baris)
     if not cekJumlah :
         print("===== Mohon maaf, jumlah karakter tidak memenuhi syarat membentuk pola. =====")
     else:
